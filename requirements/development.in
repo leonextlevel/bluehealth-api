@@ -1,0 +1,6 @@
+-r production.txt
+pip-tools
+pytest
+pytest-cov
+blue
+isort

@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  api:
+    image: bluehealth-api
+    container_name: bluehealth-api
+    build:
+      context: .
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
+        USER_ID: ${USER_ID}
+    volumes:
+      - ./src/:/usr/src/app/
+      - ./requirements/:/usr/src/requirements/
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    expose:
+      - ${APP_PORT}
+    environment:
+      - APP_PORT
+      - SECRET_KEY
+      - FLASK_APP=bluehealth.app
