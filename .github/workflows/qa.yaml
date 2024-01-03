@@ -14,4 +14,4 @@ jobs:
       - name: Lint
         run: docker run --rm bluehealth-api blue --check . --diff
       - name: Test
-        run: docker run --rm bluehealth-api pytest --cov=descanso_curto
+        run: docker run --rm bluehealth-api pytest --cov bluehealth

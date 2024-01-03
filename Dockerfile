@@ -25,6 +25,9 @@ COPY --chown=$USERNAME ./src/ $WORK_DIR
 COPY --chown=$USERNAME ./requirements/${ENVIRONMENT}.txt ${REQUIREMENTS_DIR}/${ENVIRONMENT}.txt
 COPY --chown=$USERNAME ./commands/${ENVIRONMENT}.sh ${CMD_DIR}/${ENVIRONMENT}.sh
 
+# Ajusta permissão no diretório de trabalho
+RUN chown -R $USERNAME $WORK_DIR
+
 # Define o usuário criado como default
 USER $USERNAME
 
