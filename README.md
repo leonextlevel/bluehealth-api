@@ -1,5 +1,7 @@
 # BLUEHEALTH API - TESTE PARA EMPRESA "BLUESTORM SOFTWARE"
 
+![qa workflow](https://github.com/leonextlevel/bluehealth-api/actions/workflows/qa.yaml/badge.svg)
+
 # DESAFIO
 
 Uma empresa na área da saúde está precisando criar uma API REST privada (ou seja, que precisará de alguma
